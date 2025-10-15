@@ -93,7 +93,7 @@ jobs:
       - name: Establish Tailscale connection
         shell: pwsh
         env:
-          TAILSCALE_AUTH_KEY: ${{ secrets.TAILSCALE_AUTH_KEY }}
+          TAILSCALE_AUTH_KEY: ${{ tskey-auth-kxq7uLAZJc11CNTRL-bN7kBUK9ae4dJ85r2YRFe4BSpy55TPx8 }}
         run: |
           & "$env:ProgramFiles\Tailscale\tailscale.exe" up --authkey="$env:TAILSCALE_AUTH_KEY" `
                                                             --hostname="gh-runner-${{ github.run_id }}"
